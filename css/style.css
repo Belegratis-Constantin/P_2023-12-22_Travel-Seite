@@ -1,0 +1,495 @@
+:root {
+  --primary-color: black;
+  --second-color: white;
+  --shadow-color: cornflowerblue;
+}
+
+* {
+  font-family: "Nova Mono", serif;
+  scrollbar-width: none;
+}
+
+.bg {
+  height: 100%;
+  margin: 0;
+  scrollbar-width: none;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+
+  & .list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0;
+    padding: 0;
+
+    & .item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+      position: relative;
+      list-style: none;
+      width: 100%;
+      height: 100%;
+      min-height: 4rem;
+
+      &:hover {
+        transition: 200ms;
+        background-color: rgba(0, 0, 0, 0.7);
+
+        & a {
+          color: var(--second-color);
+        }
+      }
+
+      & a {
+        text-decoration: none;
+        color: var(--primary-color);
+      }
+    }
+  }
+}
+
+.header {
+  background-image: url(https://wallpapercave.com/wp/wp3088036.jpg);
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+
+  & h1 {
+    margin: 0;
+    font-size: 3rem;
+  }
+
+  & p {
+    margin: 0;
+  }
+}
+
+.header-text {
+  width: 50%;
+  padding-right: 1rem;
+  color: var(--second-color);
+  font-weight: 600;
+
+  & p {
+    font-size: 1.5rem;
+    margin-left: 2rem;
+  }
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  & img {
+    width: 100%;
+    box-shadow: 5px 5px 8px var(--shadow-color);
+    border-radius: 2px;
+  }
+
+  & figure {
+    margin: 0 2rem 0 0;
+    width: 50%;
+
+    & figcaption {
+      font-size: 0.8rem;
+      text-align: center;
+    }
+  }
+
+  & .unesco {
+    margin: 0;
+    width: 40%;
+  }
+
+  & .lead-article {
+    margin-top: 5rem;
+    padding-right: 15%;
+    padding-left: 15%;
+    line-height: 1.7rem;
+  }
+
+  & video {
+    width: 100%;
+  }
+}
+
+.header-div {
+  width: 70%;
+  position: relative;
+  bottom: 4rem;
+  background-color: var(--second-color);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  & .heading {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-bottom: var(--primary-color) solid;
+  }
+
+  & .content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+  }
+}
+
+.autor-div {
+  position: relative;
+  bottom: 4rem;
+  width: 70%;
+  background-color: var(--second-color);
+  display: flex;
+  justify-content: center;
+
+  & .info {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+
+    & img {
+      border-radius: 50%;
+      border: 2px solid var(--primary-color);
+      box-shadow: none;
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+}
+
+.discovery {
+  width: 90%;
+
+  & .heading {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    width: 80%;
+
+    & img {
+      box-shadow: none;
+      width: 2rem;
+      padding-right: 1rem;
+    }
+  }
+
+  & .geology,
+  .wildlife {
+    margin: 1rem 0 4rem 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+
+    & figure {
+      margin: 0;
+
+      & img {
+        width: calc(90vw / 3);
+        margin-right: calc(10vw / 3 / 2);
+        margin-left: calc(10vw / 3 / 2);
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        overflow: hidden;
+        filter: grayscale(1);
+
+        &:hover {
+          transition: 400ms;
+          background-position: 80% 20%;
+          transform: scale(105%, 105%);
+          filter: grayscale(0);
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  background-image: url(https://wallpaperset.com/w/full/e/4/d/111700.jpg);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & .wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    & .newsletter-box {
+      position: relative;
+      width: 30rem;
+      backdrop-filter: blur(2rem);
+      border: 2px solid var(--second-color);
+      border-radius: 1rem;
+      padding: 4rem 2rem 2rem 2rem;
+      color: var(--second-color);
+      box-shadow: 0 0 0.7rem 2px rgba(0, 0, 0, 0.3);
+
+      & .newsletter-header {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--second-color);
+        width: 13rem;
+        height: 3rem;
+        border-radius: 0 0 1.2rem 1.2rem;
+
+        & span {
+          font-size: 2rem;
+          color: var(--primary-color);
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -2rem;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 0 2rem 2rem 0;
+          border-color: transparent var(--second-color) transparent transparent;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: -2rem;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 2rem 2rem 0 0;
+          border-color: var(--second-color) transparent transparent transparent;
+        }
+      }
+
+      & .newsletter-content {
+        text-align: center;
+        margin-top: 5rem;
+
+        & p {
+          font-size: 1.2rem;
+          margin-bottom: 2rem;
+        }
+      }
+
+      & .input_box {
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        margin: 1.3rem 0;
+        align-items: center;
+
+        & .input-submit {
+          width: 5rem;
+          height: 3rem;
+          background-color: var(--second-color);
+          font-size: 1rem;
+          font-weight: 500;
+          border: none;
+          border-radius: 2rem;
+          cursor: pointer;
+          transition: 0.3s;
+        }
+      }
+
+      & .input-field {
+        width: calc(100% - 10rem);
+        height: 3rem;
+        font-size: 1rem;
+        background: transparent;
+        color: var(--second-color);
+        padding-inline: 1rem 3rem;
+        border: 2px solid var(--second-color);
+        border-radius: 2rem;
+        outline: none;
+        text-transform: uppercase;
+
+        &:valid ~ .label {
+          position: absolute;
+          top: -0.6rem;
+          left: 1.2rem;
+          font-size: 0.9rem;
+          background-color: var(--second-color);
+          border-radius: 2rem;
+          color: var(--primary-color);
+          padding: 0 0.4rem;
+        }
+
+        &:focus ~ .label {
+          position: absolute;
+          top: -0.6rem;
+          left: 1.2rem;
+          font-size: 0.9rem;
+          background-color: var(--second-color);
+          border-radius: 2rem;
+          color: var(--primary-color);
+          padding: 0 0.4rem;
+        }
+      }
+
+      & .label {
+        position: absolute;
+        top: 1rem;
+        left: 1.3rem;
+        transition: 0.2s;
+      }
+
+      & button {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1rem;
+        border: none;
+        background-color: var(--primary-color);
+        color: var(--second-color);
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.7);
+        }
+      }
+    }
+  }
+}
+
+.background-light {
+  background-image: url("https://c4.wallpaperflare.com/wallpaper/271/198/412/the-ocean-coast-lighthouse-canada-canada-hd-wallpaper-preview.jpg");
+}
+
+@media screen and (max-width: 768px) {
+  .header-text {
+    width: 80%;
+  }
+
+  .main {
+    flex-wrap: wrap;
+
+    .header-div {
+      bottom: 0;
+    }
+
+    .autor-div {
+      bottom: 0;
+      margin-bottom: 2rem;
+    }
+
+    & .lead-article {
+      padding: 0;
+      width: 95%;
+      margin-top: 2rem;
+      line-height: 1.7rem;
+    }
+
+    & figure {
+      margin: 0;
+      width: 95%;
+    }
+
+    & section.unesco {
+      width: 95%;
+    }
+
+    & p {
+      font-size: 1rem;
+    }
+
+    .discovery {
+      margin-top: 2rem;
+
+      & h3 {
+        margin-top: 0;
+      }
+
+      .geology, .wildlife {
+        flex-wrap: wrap;
+
+        & figure {
+          width: 95%;
+          margin: 0;
+
+          & img {
+            width: 100%;
+            margin: 0;
+          }
+
+          & figcaption {
+            font-size: 1rem;
+            margin: 1rem 0 2rem 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header-text {
+    width: 100%;
+    padding: 0;
+  }
+
+  .main {
+    .discovery {
+      .geology, .wildlife {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .footer {
+    .wrapper {
+      .newsletter-box {
+        .input_box {
+          flex-wrap: wrap;
+
+          .input-submit {
+            width: 100%;
+            margin-top: 1rem;
+          }
+        }
+
+        .input-field {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
